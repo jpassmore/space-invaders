@@ -1,4 +1,4 @@
-
+// sprite functionality 
 var AlienFlock = function AlienFlock() {
   this.invulnrable = true;
   this.dx = 10; this.dy = 0;

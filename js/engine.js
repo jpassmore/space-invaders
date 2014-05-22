@@ -1,4 +1,7 @@
-var Game = new function() {                                                                  
+var Game = new function() {     
+    
+    // game functionality 
+    
   var KEY_CODES = { 37:'left', 39:'right', 32 :'fire' };
   this.keys = {};
     
