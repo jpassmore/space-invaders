@@ -9,6 +9,7 @@ var Game = new function() {
             // var = game = this (kettle example)
             //this = game.  single object which has different variables i.e speed, map, image. 
 
+    
   this.initialize = function(canvas_dom,level_data,sprite_data,callbacks) {
     this.canvas_elem = $(canvas_dom)[0];
     this.canvas = this.canvas_elem.getContext('2d');
