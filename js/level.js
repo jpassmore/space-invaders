@@ -33,7 +33,7 @@
     'player': { sx: 0,  sy: 42, w: 69, h: 58, cls: Player },
     'missile': { sx: 69,  sy: 63, w: 22,  h: 35, cls: Missile }
   }
-
+//loading of the game to the start screen where the game takes time to load the game board already defined in the index.html. Also holds the text
   function startGame() {
     var screen = new GameScreen("Alien Invaders","Press Space to Start",
                                  function() {
