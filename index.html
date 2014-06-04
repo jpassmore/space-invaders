@@ -11,16 +11,14 @@
 
   <style>
       
-/*
-      #gameboard { background:url("http://www.kevs3d.co.uk/dev/images/asteroids.png"); background-size: contain;
+      #gameboard { background-image: url(images/blue.png); background-size: contain;
        }
     
-*/
             
     
       
       #gameboard { background-color: black; }
-      #game-wrapper { margin:0  inherit; width: 500px; object-position: top; }
+      #game-wrapper { margin:0  inherit; width: 500px; align-content: : top; }
 
   </style>
 </head>
@@ -57,7 +55,7 @@ canvas
 .wrapper
 {
    padding-top: 12px;
-   text-align: left;
+   text-align: center;
 }
 
 .info
@@ -158,9 +156,9 @@ a, a:visited, a:active, a:hover
                <div class="title">Space Invaders - Pacman Edition</div>
                <div class="settings">
                   <p class="left heading">Instructions:</p>
-                  <p>Left and Right Arrows: Rotate ship</p>
-                  <p>Up Arrow: Thrust</p>
-                  <p>SPACE: Fire main weapon(s)</p>
+                  <p>Left and Right Arrows: Move Player</p>
+                  <p>Up Arrow: Shoot</p>
+                  
                   <p>Z: Fire bomb weapon (area effect, uses energy)</p>
                   <p>Down Arrow or SHIFT: Shield (will recharge...)</p>
                   <p class="highlight section">S: Enable or disable sound effects</p>
