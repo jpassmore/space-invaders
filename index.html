@@ -20,8 +20,11 @@
     <div id='game-wrapper'>
     <canvas id='gameboard' width='700' height='700'></canvas>
   </div>
+<!--setting the height and width of the gameboard using a div wrapper-->
 
- 
+    
+<!--css-->
+<!--self explanatory css - background, colour, font-->
 <style type="text/css">
 body
 {
@@ -35,22 +38,23 @@ body
         
 
    margin: 0;
-
+/*Below are div wrappers to set attributes to elements*/
 }
-
+/*The box shadow*/
 .box-shadow
 {
    -moz-box-shadow: 3px 3px 6px #222;
    -webkit-box-shadow: 3px 3px 6px #222;
    box-shadow: 3px 3px 6px #222;
 }
-
+/*Canvas*/
 canvas
 {
    background-color: #000;
    border: 1px solid #888;
 }
 
+/*Wrapper around the text box*/
 .wrapper
 {
    padding-top: 12px;
@@ -60,6 +64,7 @@ canvas
     position: fixed;
 }
 
+/*text*/
 .info
 {
    text-align: left;
@@ -148,7 +153,8 @@ a, a:visited, a:active, a:hover
    right: 1em;
 }
       </style>
-      
+
+<!--html for the text-->
    <body>
       <div class="wrapper">
          

@@ -23,8 +23,10 @@
           [0,0,1,1,1,1,1,1,1,1,0],
           [0,0,1,1,1,1,1,1,1,1,0]] };
 
-// the amount of sprites in the level // 
+//amount of enemies in each level and which style of enemy - either one or two as states below. In the game you can clearly see the two different levels which are seen in the code above and each sprite is defined by class 1 or 2. //
 
+
+//sprite data - defining sprites location on the sprite sheet using co-ordinates. Also defines how many frames per sprite, in this case two//
   var spriteData = {
     'alien1': { sx: 0,  sy: 1,  w: 43, h: 38, cls: Alien, frames: 2 },
     'alien2': { sx: 43,  sy: 0, w: 43, h: 38, cls: Alien, frames: 2 },
@@ -33,7 +35,7 @@
   }
 
   function startGame() {
-    var screen = new GameScreen("Alien Invaders","press space to start",
+    var screen = new GameScreen("Alien Invaders","Press Space to Start",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));
                                  });
