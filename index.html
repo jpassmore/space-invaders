@@ -8,21 +8,19 @@
   <script src='js/game.js'></script>
   <script src='js/level.js'></script>
     <script src='style.css'></script>
-
-  <style>
-      
-      #gameboard { background-image: url(images/blue.png); background-size: contain;
-       }
-    
-            
-    
-      
+<!--#gameboard refers to the space in which the game is displayed in. You can add a #game-wrapper to the gameboard to add styling to the board such as size, image, colour and margins as done so.-->
+<style>
+      #gameboard { background-image: url(images/blue.png); background-size: contain; }
       #gameboard { background-color: black; }
-      #game-wrapper { margin:0  inherit; width: 500px; align-content: : top; }
-
-  </style>
+      #game-wrapper { margin:0  inherit; width: 500px; align-content: : center; float:          center; }
+</style>
 </head>
 <body>
+<!--A wrapper is an element that encloses one or more other elements. to make it more convenient to specify elements in CSS and JavaScript by referring to their parent, without having to id or class each child element. In this circumstance, I have added a wrapper to assign a size to the gameboard-->
+    <div id='game-wrapper'>
+    <canvas id='gameboard' width='700' height='700'></canvas>
+  </div>
+
  
 <style type="text/css">
 body
@@ -34,6 +32,7 @@ body
    background-image: url(images/asteroid_bg.jpg);
    background-repeat:no-repeat;
     background-size: cover
+        
 
    margin: 0;
 
@@ -55,7 +54,10 @@ canvas
 .wrapper
 {
    padding-top: 12px;
-   text-align: center;
+   float: right;
+    margin-left: 900px;
+    margin-top: -700px;
+    position: fixed;
 }
 
 .info
@@ -153,7 +155,7 @@ a, a:visited, a:active, a:hover
          <div class="info">
             
             <div class="infopanel box-shadow">
-               <div class="title">Space Invaders - Pacman Edition</div>
+               <div class="title">Alien Invaders</div>
                <div class="settings">
                   <p class="left heading">Instructions:</p>
                   <p>Left and Right Arrows: Move Player</p>
@@ -176,8 +178,6 @@ a, a:visited, a:active, a:hover
   
     
     
-  <div id='game-wrapper'>
-    <canvas id='gameboard' width='500' height='500'></canvas>
-  </div>
+  
 </body>
 </html>
