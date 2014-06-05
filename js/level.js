@@ -11,17 +11,17 @@
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0]],
-     2:  [[0,0,0,0,0,0,0,0,0,0,0],
+     2:  [[0,0,1,1,1,1,1,1,1,1,0],
+          [0,0,1,1,1,1,1,1,1,1,0],
+          [0,0,1,1,1,1,1,1,1,1,0],
+          [0,0,1,1,1,1,1,1,1,1,0],
+          [0,0,1,1,1,1,1,1,1,1,0],
+          [0,0,1,1,1,1,1,1,1,1,0],
+          [0,0,1,1,1,1,1,1,1,1,0],
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
-          [0,0,0,0,0,0,0,0,0,0,0],
-          [0,0,1,1,1,1,1,1,1,1,0],
-          [0,0,1,1,1,1,1,1,1,1,0],
-          [0,0,1,1,1,1,1,1,1,1,0],
-          [0,0,1,1,1,1,1,1,1,1,0],
-          [0,0,1,1,1,1,1,1,1,1,0],
-          [0,0,1,1,1,1,1,1,1,1,0]] };
+          [0,0,0,0,0,0,0,0,0,0,0]] };
 
 //amount of enemies in each level and which style of enemy - either one or two as states below. In the game you can clearly see the two different levels which are seen in the code above and each sprite is defined by class 1 or 2. //
 
@@ -35,7 +35,7 @@
   }
 //loading of the game to the start screen where the game takes time to load the game board already defined in the index.html. Also holds the text
   function startGame() {
-    var screen = new GameScreen("Alien Invaders","Press Space to Start",
+    var screen = new GameScreen("Asteroid Invaders","Press Space to Start",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));
                                  });
