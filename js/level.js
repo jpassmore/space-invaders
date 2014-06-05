@@ -38,11 +38,14 @@
     var screen = new GameScreen("Asteroid Invaders","Press Space to Start",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));
-                                 });
+   
+                                });
+      
+      /*game loop*/
     Game.loadBoard(screen);
     Game.loop();
   }
-
+/*loose function*/
   function endGame() {
     var screen = new GameScreen("Game Over","(press space to restart)",
                                  function() {
@@ -51,7 +54,7 @@
     Game.loadBoard(screen);
   }
 
-
+/*win function*/
   function winGame() {
     var screen = new GameScreen("You Win!","(press space to restart)",
                                  function() {
@@ -60,6 +63,8 @@
     Game.loadBoard(screen);
   }
 
+
+/*ALL AUDIO*/
   $(function() {
     GameAudio.load({ 'fire' : 'media/laser.ogg', 'die' : 'media/explosion.ogg' }, 
                    function() { 

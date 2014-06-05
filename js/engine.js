@@ -9,7 +9,7 @@ var Game = new function() {
             // var = game = this (kettle example)
             //this = game.  single object which has different variables i.e speed, map, image. 
 
-    
+    /*canvas size and dimensions*/
   this.initialize = function(canvas_dom,level_data,sprite_data,callbacks) {
     this.canvas_elem = $(canvas_dom)[0];
     this.canvas = this.canvas_elem.getContext('2d');
@@ -23,12 +23,14 @@ var Game = new function() {
     $(window).keyup(function(event) {
       if(KEY_CODES[event.keyCode]) Game.keys[KEY_CODES[event.keyCode]] = false;
     });
+      
+      /*load sprite - start*/
 
     this.level_data = level_data;
     this.callbacks = callbacks;
     Sprites.load(sprite_data,this.callbacks['start']);
   };
-
+/*gameboard render*/
   this.loadBoard = function(board) { Game.board = board; };
 
   this.loop = function() { 
@@ -40,6 +42,8 @@ var Game = new function() {
 
 var Sprites = new function() {
   this.map = { }; 
+    
+    /*sprite loading and spritesheet*/
 
   this.load = function(sprite_data,callback) { 
     this.map = sprite_data;
@@ -54,6 +58,8 @@ var Sprites = new function() {
     canvas.drawImage(this.image, s.sx + frame * s.w, s.sy, s.w, s.h, x,y, s.w, s.h);
   };
 }
+
+/*firing misiles*/
 
 var GameScreen = function GameScreen(text,text2,callback) {
   this.step = function(dt) {
@@ -71,6 +77,7 @@ var GameScreen = function GameScreen(text,text2,callback) {
     canvas.fillText(text2,Game.width/2 - measure2.width/2,Game.height/2 + 40);
   };
 };
+/*level number*/
 
 var GameBoard = function GameBoard(level_number) {
   this.removed_objs = [];
